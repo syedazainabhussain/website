@@ -1,0 +1,59 @@
+/* Reset + Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  
+  /* High Contrast */
+  h1, h2, h3 {
+    color: #00ffff;
+  }
+  
+  a {
+    color: #ff4081;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Layout */
+  header, section {
+    margin-bottom: 3rem;
+  }
+  
+  /* Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .delay-1 { transition-delay: 0.3s; }
+  .delay-2 { transition-delay: 0.6s; }
+  .delay-3 { transition-delay: 0.9s; }
+  .delay-4 { transition-delay: 1.2s; }
+  
+  /* Project Box */
+  .project {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-left: 4px solid #00ffff;
+    margin: 1rem 0;
+  }
+  
