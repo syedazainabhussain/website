@@ -3,28 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Syeda Zainab's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #1e1e1e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+      transform: scale(1.1);
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      animation: fadeInDown 1s forwards;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .project-folder {
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #1e1e1e;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .project-folder:hover {
+      background-color: #2c2c2c;
+    }
+
+    .project-content {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .project-content a {
+      display: block;
+      margin-bottom: 0.5rem;
+      background-color: #00bcd4;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-content a:hover {
+      background-color: #00acc1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e1e1e;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+    }
+
+    #contact img {
+      margin-right: 10px;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    #contact img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
-    <h1>Welcome to My Portfolio</h1>
+    <h1>Syeda Zainab</h1>
   </header>
 
-  <main>
-    <div class="box">
+  <div class="container">
+    <section id="about">
       <h2>About Me</h2>
-      <p>I am a passionate developer interested in building clean and useful applications.</p>
-    </div>
+      <p>
+        I'm Syeda Zainab — an ambitious undergraduate Computer Science student with a strong passion for mobile app development using Flutter. I enjoy exploring the intersection of creativity and technology, building apps that are both intuitive and efficient.
+      </p>
+    </section>
 
-    <div class="box">
-      <h2>Featured Project</h2>
-      <p>This section can be used to highlight one of your main projects.</p>
-    </div>
-  </main>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-folder" onclick="toggleProject(this)">
+        <strong>Design Thinking Project</strong>
+        <div class="project-content">
+          <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit?utm_content=DAGleWvnptU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
+            View Storyboard
+          </a>
+          <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash?node-id=0-1&t=rqYbsuVdqAWAEUJl-1" target="_blank">
+            View Prototyping
+          </a>
+          <a href="#" target="_blank">
+            View Elevated Pitch Video
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:syedazainab7047@gmail.com">syedazainab7047@gmail.com</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="30" height="30" />
+        </a>
+        <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="30" height="30" />
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2025 Syeda Zainab. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function toggleProject(element) {
+      const content = element.querySelector('.project-content');
+      const isVisible = content.style.display === 'block';
+      content.style.display = isVisible ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
