@@ -118,6 +118,16 @@
       font-size: 0.9rem;
     }
 
+    #contact img {
+      margin-right: 10px;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    #contact img:hover {
+      transform: scale(1.2);
+    }
+
     @keyframes fadeInDown {
       from {
         opacity: 0;
@@ -152,6 +162,20 @@
     <section id="projects">
       <h2>Projects</h2>
 
+      <!-- Final Project First -->
+      <div class="project-folder" onclick="toggleProject(this)">
+        <strong>Design Thinking Final Project</strong>
+        <div class="project-content">
+          <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">
+            View Storyboard
+          </a>
+          <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-?node-id=0-1&p=f&t=DlYGfprFn63nHnch-0" target="_blank">
+            View Prototyping
+          </a>
+        </div>
+      </div>
+
+      <!-- Mid Exam Project Below -->
       <div class="project-folder" onclick="toggleProject(this)">
         <strong>Design Thinking Project - Mid Exam</strong>
         <div class="project-content">
@@ -170,37 +194,19 @@
         </div>
       </div>
 
-      <div class="project-folder" onclick="toggleProject(this)">
-        <strong>Design Thinking Final Project</strong>
-        <div class="project-content">
-          <a href="https://www.canva.com/design/your-final-storyboard-link" target="_blank">
-            View Storyboard
-          </a>
-          <a href="https://www.figma.com/design/your-final-prototype-link" target="_blank">
-            View Prototyping
-          </a>
-        </div>
-      </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <div style="background-color: #1e1e1e; padding: 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,188,212,0.2);">
-        <p style="font-size: 1.1rem; margin-bottom: 1rem;">
-          📧 <strong>Email:</strong> 
-          <a href="mailto:syedazainab7047@gmail.com" style="color: #00bcd4; text-decoration: underline;">
-            syedazainab7047@gmail.com
-          </a>
-        </p>
-        <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; margin-top: 1rem;">
-          <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank" title="LinkedIn">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40" style="border-radius: 50%; background-color: white; padding: 5px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'; this.style.boxShadow='0 0 10px #00bcd4';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"/>
-          </a>
-          <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank" title="Instagram">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="40" height="40" style="border-radius: 50%; background-color: white; padding: 5px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'; this.style.boxShadow='0 0 10px #00bcd4';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"/>
-          </a>
-        </div>
-      </div>
+      <p>Email: <a href="mailto:syedazainab7047@gmail.com">syedazainab7047@gmail.com</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="30" height="30" />
+        </a>
+        <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="30" height="30" />
+        </a>
+      </p>
     </section>
 
     <footer>
