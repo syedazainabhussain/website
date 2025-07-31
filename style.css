@@ -4,18 +4,21 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #0d0d0d;
+  color: #e0f2fe;
   line-height: 1.6;
 }
+
 nav {
   display: flex;
   justify-content: flex-end;
   gap: 2rem;
   padding: 1.5rem 2rem;
-  background-color: #0f0f0f;
+  background-color: #121212;
 }
+
 nav a {
   color: #7dd3fc;
   text-decoration: none;
@@ -23,9 +26,11 @@ nav a {
   font-size: 1rem;
   transition: color 0.3s;
 }
+
 nav a:hover {
   color: #38bdf8;
 }
+
 header {
   position: relative;
   background: url('https://images.unsplash.com/photo-1581090700227-1e8a6a18f237?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
@@ -35,6 +40,7 @@ header {
   justify-content: center;
   text-align: center;
 }
+
 header h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -43,24 +49,25 @@ header h1 {
   padding: 1rem 2rem;
   border-radius: 12px;
 }
+
 h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
   color: #7dd3fc;
   margin-top: 2rem;
+  text-align: center;
 }
+
 p {
   margin-top: 0.5rem;
   max-width: 700px;
 }
-section {
-  margin-bottom: 2rem;
-}
+
 .container {
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 2rem;
 }
+
 footer {
   text-align: center;
   margin-top: 4rem;
@@ -68,15 +75,70 @@ footer {
   color: #777;
   padding: 2rem;
 }
-.project-list {
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-box {
+  flex: 1;
+  background-color: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 0 10px #0ea5e9;
+}
+
+.project-box:hover {
+  transform: scale(1.03);
+  border-color: #38bdf8;
+  background-color: #1a1a1a;
+}
+
+.project-box.active {
+  background-color: #0e7490;
+  border-color: #67e8f9;
+  box-shadow: 0 0 20px #22d3ee;
+}
+
+.project-box h3 {
+  color: #bae6fd;
+  margin-bottom: 1rem;
+}
+
+.project-box button {
+  background-color: #0ea5e9;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project-box button:hover {
+  background-color: #0284c7;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
   margin-top: 1rem;
-  padding-left: 1rem;
 }
-.project-list li {
-  margin: 0.5rem 0;
+
+.social-icons a {
+  color: #7dd3fc;
+  transition: color 0.3s ease;
 }
-.project-folder {
-  margin-left: 1rem;
-  padding-left: 1rem;
-  border-left: 2px solid #7dd3fc;
+
+.social-icons a:hover {
+  color: #38bdf8;
 }
