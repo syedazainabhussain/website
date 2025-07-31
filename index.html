@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Syeda Zainab's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -53,61 +53,78 @@
     header h1 {
       font-size: 3rem;
       font-weight: 700;
-      animation: fadeInDown 1s forwards;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 2rem;
     }
 
-    section {
-      margin-bottom: 3rem;
-    }
-
     h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       border-bottom: 2px solid #00bcd4;
       display: inline-block;
       padding-bottom: 0.3rem;
     }
 
-    .project-folder {
-      border: 1px solid #333;
+    .projects-grid {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .project-box {
+      background: #1e1e1e;
       border-radius: 10px;
       padding: 1rem;
-      background-color: #1e1e1e;
-      cursor: pointer;
+      flex: 1 1 30%;
       transition: background 0.3s ease;
-      margin-bottom: 1rem;
+      cursor: pointer;
     }
 
-    .project-folder:hover {
-      background-color: #2c2c2c;
+    .project-box:hover {
+      background: #2c2c2c;
     }
 
-    .project-content {
+    .project-details {
       display: none;
       margin-top: 1rem;
     }
 
-    .project-content a {
+    .project-details a {
       display: block;
-      margin-bottom: 0.5rem;
-      background-color: #00bcd4;
+      background: #00bcd4;
       color: #121212;
       padding: 0.5rem 1rem;
       border-radius: 5px;
       font-weight: bold;
+      margin-bottom: 0.5rem;
       text-align: center;
       text-decoration: none;
-      transition: background-color 0.3s ease;
     }
 
-    .project-content a:hover {
+    .project-details a:hover {
       background-color: #00acc1;
+    }
+
+    #contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    #contact-icons a img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    #contact-icons a:hover img {
+      transform: scale(1.2);
     }
 
     footer {
@@ -115,28 +132,6 @@
       padding: 1rem;
       background-color: #1e1e1e;
       border-top: 1px solid #333;
-      font-size: 0.9rem;
-    }
-
-    #contact img {
-      margin-right: 10px;
-      vertical-align: middle;
-      transition: transform 0.3s ease;
-    }
-
-    #contact img:hover {
-      transform: scale(1.2);
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
   </style>
 </head>
@@ -161,78 +156,38 @@
 
     <section id="projects">
       <h2 style="text-align:center">Projects</h2>
-
-      <div class="project-folder" onclick="toggleProject(this)">
-        <strong>Exploratory Testing Projects</strong>
-        <div class="project-content">
-          <div class="project-folder" onclick="toggleProject(this)">
-            <strong>Test Charter 01 - Adactin Hotel</strong>
-            <div class="project-content">
-              <a href="https://docs.google.com/document/d/1MO0bNa-OpU_eQW6QifDZpnpdGzVK6K75/edit?usp=drive_link&ouid=106243203436810730071&rtpof=true&sd=true" target="_blank">View Document</a>
-            </div>
+      <div class="projects-grid">
+        <div class="project-box" onclick="toggleBox(this)">
+          <strong>Exploratory Testing Projects</strong>
+          <div class="project-details">
+            <a href="https://drive.google.com/file/d/1DtnAralYQbmP3aEKx8JJJYVf9v_rRLpN/view?usp=drivesdk" target="_blank">Test Charter 01</a>
+            <a href="https://drive.google.com/file/d/1tyPWvVoDiSvrDbRPNFrReuYdU5kAeIlO/view?usp=drivesdk" target="_blank">Test Charter 02</a>
           </div>
+        </div>
 
-          <div class="project-folder" onclick="toggleProject(this)">
-            <strong>Test Charter 02 - MAJU Admission Module</strong>
-            <div class="project-content">
-              <a href="https://docs.google.com/document/d/1MO0bNa-OpU_eQW6QifDZpnpdGzVK6K75/edit?usp=drive_link&ouid=106243203436810730071&rtpof=true&sd=true" target="_blank">View Document</a>
-            </div>
+        <div class="project-box" onclick="toggleBox(this)">
+          <strong>Flutter Project</strong>
+          <div class="project-details">
+            <a href="https://github.com/syedazainabhussain/trash-to-cash" target="_blank">Trash to Cash GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-box" onclick="toggleBox(this)">
+          <strong>Design Thinking Project</strong>
+          <div class="project-details">
+            <a href="https://drive.google.com/file/d/1YfVi35hKkpOfiYZbJ0jZcBePTwfnw38p/view?usp=drivesdk" target="_blank">Mid Exam</a>
+            <a href="https://drive.google.com/file/d/1MEQSpw15C4t6hdi5FSbnAHFj9bxOGi9n/view?usp=drivesdk" target="_blank">Final Project</a>
           </div>
         </div>
       </div>
-
-      <div class="project-folder" onclick="toggleProject(this)">
-        <strong>Design Thinking Project - 6th Semester</strong>
-        <div class="project-content">
-          <div class="project-folder" onclick="toggleProject(this)">
-            <strong>Mid Exam Project</strong>
-            <div class="project-content">
-              <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit?utm_content=DAGleWvnptU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">View Storyboard</a>
-              <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash?node-id=0-1&t=rqYbsuVdqAWAEUJl-1" target="_blank">View Prototyping</a>
-              <a href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view?usp=sharing" target="_blank">Elevated Pitch Video</a>
-              <a href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit?usp=sharing&ouid=106243203436810730071&rtpof=true&sd=true" target="_blank">Written Document</a>
-            </div>
-          </div>
-
-          <div class="project-folder" onclick="toggleProject(this)">
-            <strong>Final Project</strong>
-            <div class="project-content">
-              <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">View Storyboard</a>
-              <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-?node-id=0-1&p=f&t=DlYGfprFn63nHnch-0" target="_blank">View Prototyping</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-folder" onclick="toggleProject(this)">
-        <strong>Flutter Project</strong>
-        <div class="project-content">
-          <div class="project-folder" onclick="toggleProject(this)">
-            <strong>Trash to Cash App</strong>
-            <div class="project-content">
-              <a href="https://github.com/syedazainabhussain/trash-to-cash?classId=76b35b53-9ca2-4565-8a66-413147a1debc&assignmentId=d7a0c93e-30ba-4bef-84a9-9606787f66c2&submissionId=7f9715e8-e88d-ad15-1ff9-c85b03a7795c" target="_blank">View GitHub Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <div class="project-folder" onclick="toggleProject(this)">
-        <strong>Get in Touch</strong>
-        <div class="project-content">
-          <p>Email: <a href="mailto:syedazainab7047@gmail.com">syedazainab7047@gmail.com</a></p>
-          <p>
-            <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="30" height="30" />
-            </a>
-            <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank">
-              <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="30" height="30" />
-            </a>
-          </p>
-        </div>
+      <div id="contact-icons">
+        <a href="mailto:syedazainab7047@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" /></a>
+        <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></a>
+        <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" /></a>
       </div>
     </section>
 
@@ -242,10 +197,15 @@
   </div>
 
   <script>
-    function toggleProject(element) {
-      const content = element.querySelector('.project-content');
-      const isVisible = content.style.display === 'block';
-      content.style.display = isVisible ? 'none' : 'block';
+    function toggleBox(box) {
+      const allDetails = document.querySelectorAll('.project-details');
+      allDetails.forEach(detail => {
+        if (detail !== box.querySelector('.project-details')) {
+          detail.style.display = 'none';
+        }
+      });
+      const content = box.querySelector('.project-details');
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </body>
