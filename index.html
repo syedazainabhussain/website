@@ -2,225 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Syeda Zainab's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zainab's Projects</title>
   <style>
-    * {
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
     }
 
-    body {
-      background-color: #121212;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
-
-    nav {
-      background-color: #1e1e1e;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      border-bottom: 1px solid #333;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    nav a:hover {
-      color: #00bcd4;
-      transform: scale(1.1);
-    }
-
-    header {
+    h1 {
       text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      margin: 40px 0;
+      font-size: 2em;
     }
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      animation: fadeInDown 1s forwards;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #00bcd4;
-      display: inline-block;
-      padding-bottom: 0.3rem;
-    }
-
-    .projects-wrapper {
-      border: 2px solid #333;
-      border-radius: 10px;
-      padding: 2rem;
-      background-color: #1e1e1e;
-      text-align: center;
-    }
-
-    .projects-wrapper h3 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-    }
-
-    .project-grid {
+    .projects-container {
       display: flex;
-      gap: 1.5rem;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
+      padding: 0 20px;
     }
 
     .project-box {
-      flex: 1 1 30%;
-      border: 1px solid #444;
-      border-radius: 8px;
-      background-color: #2c2c2c;
-      padding: 1rem;
+      background: #222;
+      border-radius: 12px;
+      width: 30%;
+      min-width: 300px;
+      margin: 20px 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .project-box:hover {
-      transform: translateY(-5px);
+      transform: scale(1.03);
     }
 
-    .project-box h4 {
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-      color: #00bcd4;
-    }
-
-    .project-box a {
-      display: block;
-      margin: 0.5rem 0;
-      background-color: #00bcd4;
-      color: #121212;
-      padding: 0.5rem;
-      border-radius: 5px;
+    .project-title {
+      font-size: 1.2em;
       font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .project-folder {
+      background: #333;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .project-folder strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .project-content {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .project-content a {
+      display: block;
+      color: #6cf;
+      margin: 5px 0;
       text-decoration: none;
     }
 
-    .project-box a:hover {
-      background-color: #00acc1;
-    }
-
-    footer {
+    .contact {
       text-align: center;
-      padding: 1rem;
-      background-color: #1e1e1e;
-      border-top: 1px solid #333;
-      font-size: 0.9rem;
+      margin: 40px 0;
     }
 
-    #contact img {
-      margin: 0 10px;
-      vertical-align: middle;
+    .contact a img {
+      width: 40px;
+      height: 40px;
+      filter: invert(1);
       transition: transform 0.3s ease;
     }
 
-    #contact img:hover {
+    .contact a img:hover {
       transform: scale(1.2);
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <header>
-    <h1>Syeda Zainab</h1>
-  </header>
+  <h1>Zainab's Project Showcase</h1>
 
-  <div class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm Syeda Zainab — an ambitious undergraduate Computer Science student with a strong passion for mobile app development using Flutter. I enjoy exploring the intersection of creativity and technology, building apps that are both intuitive and efficient.
-      </p>
-    </section>
+  <div class="projects-container">
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-wrapper">
-        <h3>Projects</h3>
-        <div class="project-grid">
-          <div class="project-box">
-            <h4>Exploratory Testing Projects</h4>
-            <a href="https://docs.google.com/document/d/1MO0bNa-OpU_eQW6QifDZpnpdGzVK6K75/edit?usp=drive_link" target="_blank">Test Charter 01 - Adactin Hotel</a>
-            <a href="https://docs.google.com/document/d/1MO0bNa-OpU_eQW6QifDZpnpdGzVK6K75/edit?usp=drive_link" target="_blank">Test Charter 02 - MAJU Admission Module</a>
-          </div>
-          <div class="project-box">
-            <h4>Flutter Project</h4>
-            <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash?node-id=0-1&t=rqYbsuVdqAWAEUJl-1" target="_blank">Trash To Cash App (Figma)</a>
-            <a href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view?usp=sharing" target="_blank">Elevated Pitch Video</a>
-          </div>
-          <div class="project-box">
-            <h4>Design Thinking Project</h4>
-            <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">Final - Storyboard</a>
-            <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-?node-id=0-1&p=f&t=DlYGfprFn63nHnch-0" target="_blank">Final - Prototyping</a>
-            <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit?utm_content=DAGleWvnptU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Mid - Storyboard</a>
-            <a href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit?usp=sharing" target="_blank">Mid - Written Doc</a>
-          </div>
+    <!-- Exploratory Testing Projects -->
+    <div class="project-box" onclick="toggleProject(this)">
+      <div class="project-title">Exploratory Testing Projects</div>
+      <div class="project-content">
+        <div class="project-folder">
+          <strong>Test Charter 01</strong>
+          <a href="https://docs.google.com/document/d/1TbMXQVRAtA5zRH7SyyxPl07UWy3sj0oW/edit" target="_blank">View Doc</a>
+        </div>
+        <div class="project-folder">
+          <strong>Test Charter 02</strong>
+          <a href="https://docs.google.com/document/d/1KUZiF_O8A5vNBhhX5hy5dPlu9xkOaTOM/edit" target="_blank">View Doc</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        <a href="mailto:syedazainab7047@gmail.com">
-          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="30" height="30"/>
-        </a>
-        <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="30" height="30" />
-        </a>
-        <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="30" height="30" />
-        </a>
-      </p>
-    </section>
+    <!-- Flutter Project -->
+    <div class="project-box" onclick="toggleProject(this)">
+      <div class="project-title">Flutter Project</div>
+      <div class="project-content">
+        <div class="project-folder">
+          <strong>Trash To Cash</strong>
+          <a href="https://github.com/syedazainabhussain/trash-to-cash" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-      &copy; 2025 Syeda Zainab. All rights reserved.
-    </footer>
+    <!-- Design Thinking Projects -->
+    <div class="project-box" onclick="toggleProject(this)">
+      <div class="project-title">Design Thinking Projects</div>
+      <div class="project-content">
+        <!-- Mid Project -->
+        <div class="project-folder">
+          <strong>Design Thinking Project - Mid Exam</strong>
+          <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit?utm_content=DAGleWvnptU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">View Storyboard</a>
+          <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash?node-id=0-1&t=rqYbsuVdqAWAEUJl-1" target="_blank">View Prototyping</a>
+          <a href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view?usp=sharing" target="_blank">View Elevated Pitch Video</a>
+          <a href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit?usp=sharing&ouid=106243203436810730071&rtpof=true&sd=true" target="_blank">View Written Document</a>
+        </div>
+
+        <!-- Final Project -->
+        <div class="project-folder">
+          <strong>Design Thinking Final Project</strong>
+          <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">View Storyboard</a>
+          <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-?node-id=0-1&p=f&t=DlYGfprFn63nHnch-0" target="_blank">View Prototyping</a>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <!-- Contact Section -->
+  <div class="contact">
+    <a href="mailto:syedazainabhussain@gmail.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+    </a>
+  </div>
+
+  <script>
+    function toggleProject(element) {
+      const content = element.querySelector(".project-content");
+      const allContents = document.querySelectorAll(".project-content");
+
+      allContents.forEach(c => {
+        if (c !== content) c.style.display = "none";
+      });
+
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
 </body>
 </html>
