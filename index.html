@@ -5,53 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Syeda's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <header>Syeda's Portfolio</header>
 
-  <header>
-    <h1>Syeda's Portfolio</h1>
-  </header>
+  <div class="container">
 
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>I am Syeda Zainab, a passionate Computer Science student exploring mobile development, testing, and UI/UX. I believe in learning by doing and building user-friendly experiences.</p>
-  </section>
+    <!-- Projects Section -->
+    <div>
+      <div class="section-title">Projects</div>
+      <div class="projects-wrapper">
 
-  <section id="projects" class="container">
-    <h2 class="center">Projects</h2>
-    <div class="project-container">
-      <div class="project-box" onclick="highlightBox(this)">
-        <h3>Exploratory Testing</h3>
-        <button onclick="event.stopPropagation(); window.open('https://example.com/exploratory-testing', '_blank')">View Report</button>
-      </div>
-      <div class="project-box" onclick="highlightBox(this)">
-        <h3>Flutter App – Trash to Cash</h3>
-        <button onclick="event.stopPropagation(); window.open('https://example.com/flutter-trash2cash', '_blank')">See App</button>
-      </div>
-      <div class="project-box" onclick="highlightBox(this)">
-        <h3>Design Thinking</h3>
-        <button onclick="event.stopPropagation(); window.open('https://example.com/design-thinking', '_blank')">Open Project</button>
+        <!-- Exploratory Testing -->
+        <div class="project-box" onclick="highlightBox(this)">
+          <div class="project-title">Exploratory Testing</div>
+          <a class="btn" href="https://docs.google.com/document/d/16eoRyUlfJkQI9qiGz8lIwUefeEiD6_AT/edit?usp=sharing" target="_blank">Test Charter</a>
+        </div>
+
+        <!-- Flutter Project -->
+        <div class="project-box" onclick="highlightBox(this)">
+          <div class="project-title">Flutter Project - Trash To Cash</div>
+          <a class="btn" href="https://github.com/syedazainabhussain/trash-to-cash" target="_blank">GitHub Link</a>
+        </div>
+
+        <!-- Design Thinking -->
+        <div class="project-box" onclick="highlightBox(this)">
+          <div class="project-title">Design Thinking Project</div>
+          <a class="btn" href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">Final Storyboard</a>
+          <a class="btn" href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-?node-id=0-1" target="_blank">Final Prototyping</a>
+          <a class="btn" href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit" target="_blank">Mid Storyboard</a>
+          <a class="btn" href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash?node-id=0-1" target="_blank">Mid Prototyping</a>
+          <a class="btn" href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view" target="_blank">Mid Pitch Video</a>
+          <a class="btn" href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit?usp=sharing" target="_blank">Mid Written Doc</a>
+        </div>
+
       </div>
     </div>
-  </section>
 
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <div class="social-icons">
-      <a href="mailto:syeda@example.com" target="_blank">📧</a>
-      <a href="https://www.linkedin.com/in/your-profile" target="_blank">💼</a>
-      <a href="https://www.instagram.com/yourprofile" target="_blank">📸</a>
+    <!-- Contact Section -->
+    <div class="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact-icons">
+        <a href="mailto:syedazainabhussain@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/syedazainabhussain/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/syedazainabhussain" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Syeda Zainab</p>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
