@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Syeda Zainab's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -53,78 +53,79 @@
     header h1 {
       font-size: 3rem;
       font-weight: 700;
+      animation: fadeInDown 1s forwards;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem;
     }
 
+    section {
+      margin-bottom: 3rem;
+    }
+
     h2 {
       font-size: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       border-bottom: 2px solid #00bcd4;
       display: inline-block;
       padding-bottom: 0.3rem;
     }
 
-    .projects-grid {
+    .projects-wrapper {
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 2rem;
+      background-color: #1e1e1e;
+      text-align: center;
+    }
+
+    .projects-wrapper h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-grid {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       justify-content: space-between;
       flex-wrap: wrap;
     }
 
     .project-box {
-      background: #1e1e1e;
-      border-radius: 10px;
-      padding: 1rem;
       flex: 1 1 30%;
-      transition: background 0.3s ease;
-      cursor: pointer;
-    }
-
-    .project-box:hover {
-      background: #2c2c2c;
-    }
-
-    .project-details {
-      display: none;
-      margin-top: 1rem;
-    }
-
-    .project-details a {
-      display: block;
-      background: #00bcd4;
-      color: #121212;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .project-details a:hover {
-      background-color: #00acc1;
-    }
-
-    #contact-icons {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    #contact-icons a img {
-      width: 30px;
-      height: 30px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      background-color: #2c2c2c;
+      padding: 1rem;
       transition: transform 0.3s ease;
     }
 
-    #contact-icons a:hover img {
-      transform: scale(1.2);
+    .project-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-box h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: #00bcd4;
+    }
+
+    .project-box a {
+      display: block;
+      margin: 0.5rem 0;
+      background-color: #00bcd4;
+      color: #121212;
+      padding: 0.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project-box a:hover {
+      background-color: #00acc1;
     }
 
     footer {
@@ -132,6 +133,28 @@
       padding: 1rem;
       background-color: #1e1e1e;
       border-top: 1px solid #333;
+      font-size: 0.9rem;
+    }
+
+    #contact img {
+      margin: 0 10px;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    #contact img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -150,33 +173,31 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm Syeda Zainab — an ambitious undergraduate Computer Science student specializing in QA (Quality Assurance) and mobile app development. I focus on building reliable, user-friendly applications and have hands-on experience in exploratory testing, UI/UX design, and mobile innovation using Flutter.
+        I'm Syeda Zainab — an ambitious undergraduate Computer Science student with a strong passion for mobile app development using Flutter. I enjoy exploring the intersection of creativity and technology, building apps that are both intuitive and efficient.
       </p>
     </section>
 
     <section id="projects">
-      <h2 style="text-align:center">Projects</h2>
-      <div class="projects-grid">
-        <div class="project-box" onclick="toggleBox(this)">
-          <strong>Exploratory Testing Projects</strong>
-          <div class="project-details">
-            <a href="https://drive.google.com/file/d/1DtnAralYQbmP3aEKx8JJJYVf9v_rRLpN/view?usp=drivesdk" target="_blank">Test Charter 01</a>
-            <a href="https://drive.google.com/file/d/1tyPWvVoDiSvrDbRPNFrReuYdU5kAeIlO/view?usp=drivesdk" target="_blank">Test Charter 02</a>
+      <h2>Projects</h2>
+      <div class="projects-wrapper">
+        <h3>Projects</h3>
+        <div class="project-grid">
+          <div class="project-box">
+            <h4>Exploratory Testing Projects</h4>
+            <a href="https://docs.google.com/document/d/1MO0bNa-OpU_eQW6QifDZpnpdGzVK6K75/edit?usp=drive_link" target="_blank">Test Charter 01 - Adactin Hotel</a>
+            <a href="https://docs.google.com/document/d/1MO0bNa-OpU_eQW6QifDZpnpdGzVK6K75/edit?usp=drive_link" target="_blank">Test Charter 02 - MAJU Admission Module</a>
           </div>
-        </div>
-
-        <div class="project-box" onclick="toggleBox(this)">
-          <strong>Flutter Project</strong>
-          <div class="project-details">
-            <a href="https://github.com/syedazainabhussain/trash-to-cash" target="_blank">Trash to Cash GitHub</a>
+          <div class="project-box">
+            <h4>Flutter Project</h4>
+            <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash?node-id=0-1&t=rqYbsuVdqAWAEUJl-1" target="_blank">Trash To Cash App (Figma)</a>
+            <a href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view?usp=sharing" target="_blank">Elevated Pitch Video</a>
           </div>
-        </div>
-
-        <div class="project-box" onclick="toggleBox(this)">
-          <strong>Design Thinking Project</strong>
-          <div class="project-details">
-            <a href="https://drive.google.com/file/d/1YfVi35hKkpOfiYZbJ0jZcBePTwfnw38p/view?usp=drivesdk" target="_blank">Mid Exam</a>
-            <a href="https://drive.google.com/file/d/1MEQSpw15C4t6hdi5FSbnAHFj9bxOGi9n/view?usp=drivesdk" target="_blank">Final Project</a>
+          <div class="project-box">
+            <h4>Design Thinking Project</h4>
+            <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">Final - Storyboard</a>
+            <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-?node-id=0-1&p=f&t=DlYGfprFn63nHnch-0" target="_blank">Final - Prototyping</a>
+            <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit?utm_content=DAGleWvnptU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Mid - Storyboard</a>
+            <a href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit?usp=sharing" target="_blank">Mid - Written Doc</a>
           </div>
         </div>
       </div>
@@ -184,29 +205,22 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <div id="contact-icons">
-        <a href="mailto:syedazainab7047@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" /></a>
-        <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></a>
-        <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" /></a>
-      </div>
+      <p>
+        <a href="mailto:syedazainab7047@gmail.com">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="30" height="30"/>
+        </a>
+        <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="30" height="30" />
+        </a>
+        <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="30" height="30" />
+        </a>
+      </p>
     </section>
 
     <footer>
       &copy; 2025 Syeda Zainab. All rights reserved.
     </footer>
   </div>
-
-  <script>
-    function toggleBox(box) {
-      const allDetails = document.querySelectorAll('.project-details');
-      allDetails.forEach(detail => {
-        if (detail !== box.querySelector('.project-details')) {
-          detail.style.display = 'none';
-        }
-      });
-      const content = box.querySelector('.project-details');
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 </body>
 </html>
