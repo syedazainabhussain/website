@@ -1,185 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Zainab Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syeda's Portfolio</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
       color: white;
-      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 2rem;
-      background-color: #1e1e1e;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    h1 {
       font-size: 3rem;
-      color: #00ffcc;
-      margin-bottom: 0.5rem;
-    }
-
-    p.bio {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: auto;
-      color: #cccccc;
-    }
-
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #00ffcc;
-      margin-bottom: 2rem;
-    }
-
-    .about {
+      padding: 30px 0;
       background-color: #1a1a1a;
-      border-radius: 15px;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      color: #00ffcc;
     }
 
-    .projects {
-      background-color: #1e1e1e;
-      border-radius: 15px;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    .container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .main-box {
+      background-color: #1f1f1f;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+    .main-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #00ffff;
+    }
+
+    .project-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .project-box {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .project-folder {
-      flex: 1 1 calc(33.333% - 1rem);
-      background-color: #2c2c2c;
-      border-radius: 10px;
-      padding: 1rem;
-      cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .project-folder:hover {
-      transform: scale(1.02);
       background-color: #333;
+      width: 32%;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
     }
 
-    .project-content {
-      display: none;
-      margin-top: 1rem;
+    .project-box:hover {
+      background-color: #444;
     }
 
-    .project-content a {
-      display: block;
+    .project-box h3 {
+      text-align: center;
       color: #00ccff;
-      margin-bottom: 0.5rem;
+    }
+
+    .project-box a {
+      display: block;
+      color: #fff;
       text-decoration: none;
+      margin: 10px 0;
+      transition: 0.2s;
     }
 
-    .project-content a:hover {
-      text-decoration: underline;
-    }
-
-    h4 {
-      margin-top: 0.5rem;
+    .project-box a:hover {
       color: #00ffcc;
     }
 
-    @media (max-width: 768px) {
-      .project-folder {
-        flex: 1 1 100%;
-      }
+    .contact-section {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .contact-icons a {
+      margin: 0 20px;
+      color: #00ccff;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact-icons a:hover {
+      color: #00ff99;
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <header>Syeda's Portfolio</header>
 
-<header>
-  <h1>Syeda Zainab</h1>
-  <p class="bio">
-    I am an undergraduate Computer Science student with a strong interest in mobile app development using Flutter. 
-    My portfolio includes three major projects: <strong>Exploratory Testing</strong>, <strong>Design Thinking</strong>, and a Flutter app called <strong>Trash to Cash</strong>.
-  </p>
-</header>
+  <div class="container">
+    <div class="main-box">
+      <h2>Projects</h2>
+      <div class="project-section">
 
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    Hello! I'm Zainab, a passionate and curious CS student at Muhammad Ali Jinnah University. I enjoy creating meaningful apps and user-friendly designs. 
-    I have hands-on experience with <strong>Flutter, HTML/CSS, C++, Python, and SQL</strong>. 
-    I'm currently working on a smart attendance system using ESP32 and Flutter. I love learning new tech and taking on real-world challenges.
-  </p>
-</section>
+        <!-- Exploratory Testing -->
+        <div class="project-box">
+          <h3>Exploratory Testing</h3>
+          <a href="https://docs.google.com/document/d/1J2pb2X9LCokMpxSovVF48lkm4LgkkP9G/edit?usp=sharing&ouid=106243203436810730071&rtpof=true&sd=true" target="_blank">Test Charter - 01</a>
+          <a href="https://docs.google.com/document/d/16eoRyUlfJkQI9qiGz8lIwUefeEiD6_AT/edit?usp=sharing&ouid=106243203436810730071&rtpof=true&sd=true" target="_blank">Test Charter - 02</a>
+        </div>
 
-<section class="projects" id="projects">
-  <h2>Projects</h2>
+        <!-- Flutter Project -->
+        <div class="project-box">
+          <h3>Flutter Project</h3>
+          <a href="https://github.com/syedazainabhussain/trash-to-cash" target="_blank">Trash To Cash GitHub</a>
+        </div>
 
-  <div class="project-box">
+        <!-- Design Thinking -->
+        <div class="project-box">
+          <h3>Design Thinking</h3>
+          <strong>Mid Exam</strong>
+          <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit" target="_blank">Storyboard</a>
+          <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash?node-id=0-1&t=rqYbsuVdqAWAEUJl-1" target="_blank">Prototyping</a>
+          <a href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view?usp=sharing" target="_blank">Elevated Pitch Video</a>
+          <a href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit" target="_blank">Written Document</a>
+          <br /><br />
+          <strong>Final Exam</strong>
+          <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">Storyboard</a>
+          <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-?node-id=0-1&p=f&t=DlYGfprFn63nHnch-0" target="_blank">Prototyping</a>
+        </div>
 
-    <!-- Exploratory Testing -->
-    <div class="project-folder" onclick="toggleProject(this)">
-      <strong>Exploratory Testing</strong>
-      <div class="project-content">
-        <a href="https://docs.google.com/document/d/1oYPqW5JhLPmU-FZ9zL-gS5wh09gKZFRM/edit?usp=sharing" target="_blank">Test Charter - 01</a>
-        <a href="https://docs.google.com/document/d/16eoRyUlfJkQI9qiGz8lIwUefeEiD6_AT/edit?usp=sharing" target="_blank">Test Charter - 02</a>
       </div>
     </div>
 
-    <!-- Flutter App -->
-    <div class="project-folder" onclick="toggleProject(this)">
-      <strong>Flutter App: Trash to Cash</strong>
-      <div class="project-content">
-        <a href="https://github.com/syedazainabhussain/trash-to-cash" target="_blank">GitHub Repository</a>
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <div class="contact-icons">
+        <a href="mailto:syedazainabofficial@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/syeda-zainab-693523294/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/_life_underthesky" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
-
-    <!-- Design Thinking -->
-    <div class="project-folder" onclick="toggleProject(this)">
-      <strong>Design Thinking</strong>
-      <div class="project-content">
-        <h4>Mid Exam</h4>
-        <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit" target="_blank">Storyboard</a>
-        <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash" target="_blank">Prototyping</a>
-        <a href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view" target="_blank">Pitch Video</a>
-        <a href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit" target="_blank">Written Document</a>
-
-        <h4>Final Exam</h4>
-        <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">Storyboard</a>
-        <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-" target="_blank">Prototyping</a>
-      </div>
-    </div>
-
   </div>
-</section>
-
-<script>
-  function toggleProject(folder) {
-    const allContents = document.querySelectorAll('.project-content');
-    allContents.forEach(content => {
-      if (content !== folder.querySelector('.project-content')) {
-        content.style.display = 'none';
-      }
-    });
-
-    const content = folder.querySelector('.project-content');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
-
 </body>
 </html>
