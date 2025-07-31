@@ -2,168 +2,206 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zainab's Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syeda Zainab's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
-
-    h1 {
-      text-align: center;
-      margin: 40px 0;
-      font-size: 2em;
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      line-height: 1.6;
     }
-
-    .projects-container {
+    nav {
+      background-color: #1e1e1e;
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding: 0 20px;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
     }
-
-    .project-box {
-      background: #222;
-      border-radius: 12px;
-      width: 30%;
-      min-width: 300px;
-      margin: 20px 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
     }
-
-    .project-box:hover {
-      transform: scale(1.03);
+    nav a:hover {
+      color: #00bcd4;
     }
-
-    .project-title {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 10px;
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     }
-
-    .project-folder {
-      background: #333;
-      margin: 10px 0;
-      padding: 10px;
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .project-grid {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .project-card {
+      flex: 1;
+      background-color: #1e1e1e;
+      padding: 1rem;
       border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #333;
     }
-
-    .project-folder strong {
-      display: block;
-      margin-bottom: 5px;
+    .project-card:hover {
+      transform: translateY(-5px);
     }
-
-    .project-content {
+    .sub-projects {
+      margin-top: 1rem;
       display: none;
-      margin-top: 10px;
     }
-
-    .project-content a {
-      display: block;
-      color: #6cf;
-      margin: 5px 0;
+    .sub-project {
+      background-color: #2c2c2c;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .sub-project h4 {
+      margin-bottom: 0.5rem;
+    }
+    .sub-project a {
+      color: #00bcd4;
       text-decoration: none;
     }
-
-    .contact {
-      text-align: center;
-      margin: 40px 0;
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
     }
-
-    .contact a img {
+    .contact-icons img {
       width: 40px;
       height: 40px;
-      filter: invert(1);
       transition: transform 0.3s ease;
     }
-
-    .contact a img:hover {
+    .contact-icons img:hover {
       transform: scale(1.2);
     }
   </style>
 </head>
 <body>
-
-  <h1>Zainab's Project Showcase</h1>
-
-  <div class="projects-container">
-
-    <!-- Exploratory Testing Projects -->
-    <div class="project-box" onclick="toggleProject(this)">
-      <div class="project-title">Exploratory Testing Projects</div>
-      <div class="project-content">
-        <div class="project-folder">
-          <strong>Test Charter 01</strong>
-          <a href="https://docs.google.com/document/d/1TbMXQVRAtA5zRH7SyyxPl07UWy3sj0oW/edit" target="_blank">View Doc</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <header>
+    <h1>Syeda Zainab</h1>
+  </header>
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am Syeda Zainab, an undergraduate Computer Science student passionate about developing meaningful and functional mobile apps using Flutter. I combine creativity with code to bring ideas to life.</p>
+    </section>
+    <section id="projects">
+      <h2 style="text-align:center">Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" onclick="toggleSubProjects('exploratory')">
+          <h3>Exploratory Testing</h3>
         </div>
-        <div class="project-folder">
-          <strong>Test Charter 02</strong>
-          <a href="https://docs.google.com/document/d/1KUZiF_O8A5vNBhhX5hy5dPlu9xkOaTOM/edit" target="_blank">View Doc</a>
+        <div class="project-card" onclick="toggleSubProjects('design')">
+          <h3>Design Thinking Project (6th Semester)</h3>
         </div>
-      </div>
-    </div>
-
-    <!-- Flutter Project -->
-    <div class="project-box" onclick="toggleProject(this)">
-      <div class="project-title">Flutter Project</div>
-      <div class="project-content">
-        <div class="project-folder">
-          <strong>Trash To Cash</strong>
-          <a href="https://github.com/syedazainabhussain/trash-to-cash" target="_blank">GitHub Repo</a>
+        <div class="project-card" onclick="toggleSubProjects('flutter')">
+          <h3>Flutter Project</h3>
         </div>
       </div>
-    </div>
 
-    <!-- Design Thinking Projects -->
-    <div class="project-box" onclick="toggleProject(this)">
-      <div class="project-title">Design Thinking Projects</div>
-      <div class="project-content">
-        <!-- Mid Project -->
-        <div class="project-folder">
-          <strong>Design Thinking Project - Mid Exam</strong>
-          <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit?utm_content=DAGleWvnptU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">View Storyboard</a>
-          <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash?node-id=0-1&t=rqYbsuVdqAWAEUJl-1" target="_blank">View Prototyping</a>
-          <a href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view?usp=sharing" target="_blank">View Elevated Pitch Video</a>
-          <a href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit?usp=sharing&ouid=106243203436810730071&rtpof=true&sd=true" target="_blank">View Written Document</a>
+      <div id="exploratory" class="sub-projects">
+        <div class="sub-project">
+          <h4>Test Charter 01 - Adactin Hotel</h4>
+          <a href="https://docs.google.com/document/d/1MO0bNa-OpU_eQW6QifDZpnpdGzVK6K75/edit" target="_blank">View Document</a>
         </div>
-
-        <!-- Final Project -->
-        <div class="project-folder">
-          <strong>Design Thinking Final Project</strong>
-          <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">View Storyboard</a>
-          <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-?node-id=0-1&p=f&t=DlYGfprFn63nHnch-0" target="_blank">View Prototyping</a>
+        <div class="sub-project">
+          <h4>Test Charter 02 - Muhammad Ali Jinnah University Admission Module</h4>
+          <a href="https://docs.google.com/document/d/1MO0bNa-OpU_eQW6QifDZpnpdGzVK6K75/edit" target="_blank">View Document</a>
         </div>
       </div>
-    </div>
 
-  </div>
+      <div id="design" class="sub-projects">
+        <div class="sub-project">
+          <h4>Mid Exam Project</h4>
+          <a href="https://www.canva.com/design/DAGleWvnptU/Ce3OaSRZjQvEOjjCz3NsMQ/edit" target="_blank">Storyboard</a><br>
+          <a href="https://www.figma.com/design/f9F06jE0q4HF3cMKJEwZtG/Trash-To-Cash" target="_blank">Prototyping</a><br>
+          <a href="https://drive.google.com/file/d/1FY5D3E0VOkAgdvyziavnd_FzUOYj7WDn/view" target="_blank">Elevated Pitch Video</a><br>
+          <a href="https://docs.google.com/document/d/1BZWKwifrAwnjvJXLeaJujX2hNOq8Ah5f/edit" target="_blank">Written Document</a>
+        </div>
+        <div class="sub-project">
+          <h4>Final Project</h4>
+          <a href="https://www.canva.com/design/DAGrcw56-ts/wGSifIfbK8-apfOcIwSTgA/edit" target="_blank">Storyboard</a><br>
+          <a href="https://www.figma.com/design/g8BDb2Q1hXrhNaMPlkfqk5/InPay-Finance-App-1-" target="_blank">Prototyping</a>
+        </div>
+      </div>
 
-  <!-- Contact Section -->
-  <div class="contact">
-    <a href="mailto:syedazainabhussain@gmail.com">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
-    </a>
+      <div id="flutter" class="sub-projects">
+        <div class="sub-project">
+          <h4>Trash To Cash App</h4>
+          <a href="https://github.com/syedazainabhussain/trash-to-cash" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2 style="text-align:center">Contact</h2>
+      <div class="contact-icons">
+        <a href="mailto:syedazainab7047@gmail.com">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/new-post.png" alt="Email" />
+        </a>
+        <a href="https://www.linkedin.com/in/syedazainab-mehboob-73a736231" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://www.instagram.com/invites/contact/?igsh=yhhpdik0ubpm&utm_content=5gzwkwc" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
+        </a>
+      </div>
+    </section>
   </div>
 
   <script>
-    function toggleProject(element) {
-      const content = element.querySelector(".project-content");
-      const allContents = document.querySelectorAll(".project-content");
-
-      allContents.forEach(c => {
-        if (c !== content) c.style.display = "none";
+    function toggleSubProjects(id) {
+      const sections = document.querySelectorAll('.sub-projects');
+      sections.forEach(sec => {
+        if (sec.id === id) {
+          sec.style.display = sec.style.display === 'block' ? 'none' : 'block';
+        } else {
+          sec.style.display = 'none';
+        }
       });
-
-      content.style.display = content.style.display === "block" ? "none" : "block";
     }
   </script>
-
 </body>
 </html>
